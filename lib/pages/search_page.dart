@@ -104,7 +104,7 @@ class _SearchPageState extends State<SearchPage> {
         crossAxisCount: 4,
         mainAxisSpacing: 4,
         crossAxisSpacing: 4,
-        itemBuilder: (context, index) {
+        itemBuilder: (context, sindex) {
           final note = notes[index];
 
           return GestureDetector(
