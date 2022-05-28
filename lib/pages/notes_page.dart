@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:noteapp/pages/edit_note_page.dart';
 import 'package:noteapp/pages/search_page.dart';
-
 import '../db/notes_database.dart';
 import '../model/note.dart';
 import '../widget/note_card_widget.dart';

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../model/note.dart';
 
 final _lightColors = [
-  Colors.amber.shade300,
-  Colors.lightGreen.shade300,
-  Colors.lightBlue.shade300,
-  Colors.orange.shade300,
-  Colors.pinkAccent.shade100,
-  Colors.tealAccent.shade100
+  const Color(0xffE8F9FD).withOpacity(0.7),
+  const Color(0xff79DAE8).withOpacity(0.7),
+  const Color(0xff68A7AD).withOpacity(0.7),
+  const Color(0xff99C4C8).withOpacity(0.7),
+  const Color(0xff0AA1DD).withOpacity(0.7),
 ];
 
 class NoteCardWidget extends StatelessWidget {
@@ -31,6 +31,8 @@ class NoteCardWidget extends StatelessWidget {
     final minHeight = getMinHeight(index);
 
     return Card(
+      elevation: 2.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
       color: color,
       child: Container(
         constraints: BoxConstraints(minHeight: minHeight),
@@ -41,7 +43,7 @@ class NoteCardWidget extends StatelessWidget {
           children: [
             Text(
               time,
-              style: TextStyle(color: Colors.grey.shade700),
+              style: GoogleFonts.akshar(fontSize: 13.sp, color: Colors.black54),
             ),
             SizedBox(height: 4.h),
             Text(

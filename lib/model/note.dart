@@ -15,7 +15,7 @@ class NoteFields {
 }
 
 class NoteSearch {
-  final int? id;
+  final int id;
   final bool isImportant;
   final int number;
   final String title;
@@ -23,7 +23,7 @@ class NoteSearch {
   final DateTime createdTime;
 
   const NoteSearch({
-    this.id,
+    required this.id,
     required this.isImportant,
     required this.number,
     required this.title,
@@ -33,7 +33,7 @@ class NoteSearch {
 
   factory NoteSearch.fromJson(Map<String, dynamic> json) {
     return NoteSearch(
-      id: json[NoteFields.id] as int?,
+      id: json[NoteFields.id] as int,
       isImportant: json[NoteFields.isImportant] == 1,
       number: json[NoteFields.number] as int,
       title: json[NoteFields.title] as String,
