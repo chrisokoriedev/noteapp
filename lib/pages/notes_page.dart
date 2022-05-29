@@ -1,11 +1,12 @@
+import 'package:Testa/pages/edit_note_page.dart';
+import 'package:Testa/pages/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-import 'package:noteapp/pages/edit_note_page.dart';
-import 'package:noteapp/pages/search_page.dart';
+
 import '../db/notes_database.dart';
 import '../model/note.dart';
 import '../widget/note_card_widget.dart';
@@ -74,6 +75,7 @@ class _NotesPageState extends State<NotesPage> {
                     )
                   : buildNotes(),
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.black,
           child: Icon(

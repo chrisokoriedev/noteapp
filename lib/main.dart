@@ -1,8 +1,8 @@
+import 'package:Testa/pages/notes_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:noteapp/pages/notes_page.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget? child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Notepad',
+          title: 'Testa',
           themeMode: ThemeMode.dark,
           theme: ThemeData(
             primaryColor: Colors.black,

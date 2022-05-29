@@ -55,14 +55,17 @@ class NoteCardWidget extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(
+              height: 10.h,
+            ),
             Text(
               note.description,
-              overflow: TextOverflow.fade,
-              maxLines: 3,
+              overflow: TextOverflow.clip,
+              maxLines: 5,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16.sp,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w400,
               ),
             ),
           ],

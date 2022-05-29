@@ -152,6 +152,25 @@ class _SearchPageState extends State<SearchPage> {
                                           ),
                                         ],
                                       ),
+                                      Row(
+                                        children: [
+                                          SizedBox(
+                                            width: 300.w,
+                                            child: Wrap(
+                                              children: [
+                                                Text(
+                                                  data[index].description,
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.fade,
+                                                  style: GoogleFonts.gabriela(
+                                                      color: Colors.white70,
+                                                      fontSize: 18.sp),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                 ),
