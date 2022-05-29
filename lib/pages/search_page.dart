@@ -91,7 +91,16 @@ class _SearchPageState extends State<SearchPage> {
               FutureBuilder<List<NoteSearch>>(
                 future: NotesDatabase.instance.search(searchKey),
                 builder: (BuildContext context, AsyncSnapshot snapshot) {
-                  if (snapshot.hasError) print('error');
+                  if (snapshot.hasError) {
+                    print('error');
+                  } else if (snapshot.isNull == false) {
+                    const Center(
+                      child: Text(
+                        'Search not Found',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    );
+                  }
                   List<NoteSearch> data = List.from(snapshot.data);
                   return snapshot.hasData
                       ? Expanded(

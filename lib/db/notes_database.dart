@@ -25,10 +25,10 @@ class NotesDatabase {
   }
 
   Future _createDB(Database db, int version) async {
-    const idType = 'INTEGER PRI MARY KEY AUTOINCREMENT';
-    const textType = 'TEXT NOT NULL';
-    const boolType = 'BOOLEAN NOT NULL';
-    const integerType = 'INTEGER NOT NULL';
+    final idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
+    final textType = 'TEXT NOT NULL';
+    final boolType = 'BOOLEAN NOT NULL';
+    final integerType = 'INTEGER NOT NULL';
 
     await db.execute('''
 CREATE TABLE $tableNotes ( 
@@ -67,7 +67,7 @@ CREATE TABLE $tableNotes (
 
   Future<List<Note>> readAllNotes() async {
     final db = await instance.database;
-    const orderBy = '${NoteFields.time} ASC';
+    final orderBy = '${NoteFields.time} ASC';
     final result = await db.query(tableNotes, orderBy: orderBy);
     return result.map((json) => Note.fromJson(json)).toList();
   }
@@ -110,3 +110,5 @@ CREATE TABLE $tableNotes (
     db.close();
   }
 }
+
+

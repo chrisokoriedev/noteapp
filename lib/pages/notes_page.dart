@@ -49,7 +49,7 @@ class _NotesPageState extends State<NotesPage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text(
-            'Notes',
+            'Testa',
             style: GoogleFonts.acme(fontSize: 26.sp),
           ),
           actions: [
